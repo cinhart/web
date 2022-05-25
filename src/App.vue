@@ -1,20 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <FruitCard name="Apple"  family="Rosaceae" calories="52"/>
+    <FruitCard name="Cherry"  family="Rosaceae"/>
+    <FruitCard name="Banana"  family="Musaceae"/>
   </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FruitCard from './components/FruitCard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    FruitCard
+}
 }
 </script>
+
 
 <style>
 #app {
