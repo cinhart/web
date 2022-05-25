@@ -2,8 +2,8 @@
   <div class="fruit-card">
     <div>
       <h2 class="name">{{name}}</h2>
-      <p class="family">famille des {{family}}</p>
-      <p class="order">ordre {{order}}</p>
+      <p class="family">{{family}} family</p>
+      <p class="order">{{order}} order</p>
       <p class="calories">{{calories}} cal</p>
     </div>  
   </div>
@@ -15,7 +15,7 @@
         props: {
             name: {type:String, required: true},
             family: {type:String, required: true},
-            order: {type:String, default:"inconnu"},
+            order: {type:String, default:"Unknown"},
             calories: {type:String, default: "???"}
         }
 	}
