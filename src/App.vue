@@ -1,7 +1,12 @@
 <template>
   <div id="app">
-    <div v-for="fruit in fruitlist" :key="fruit.id">
-      <FruitCard :name="fruit.name"  :family="fruit.family" :calories="fruit.nutritions.calories"/>
+    <div id="searchbar">
+        <input type="text" v-model="search" placeholder="look for a fruit..." />
+    </div>
+    <div id="fruits-gallery">
+      <div class="cards" v-for="fruit in fruitlist" :key="fruit.id">
+        <FruitCard :name="fruit.name"  :family="fruit.family" :order="fruit.order" :calories="fruit.nutritions.calories"/>
+      </div>
     </div>
   </div>
 </template>
@@ -21,8 +26,7 @@ export default {
   },
   data(){
     return{
-      post: null,
-      searchbar:"",
+      search:"",
       fruitlist : []
     }
   },
@@ -36,12 +40,31 @@ export default {
 
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin-top: 60px;
 }
+
+#fruits-gallery {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.cards {
+  background: #9ba747;
+  width: 15%;
+  float: left;
+  padding: 20px;
+  border-radius: 15px 50px;
+  margin: 5px
+}
+
 </style>

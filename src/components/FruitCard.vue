@@ -2,9 +2,9 @@
   <div class="fruit-card">
     <div>
       <h2 class="name">{{name}}</h2>
-      <p class="family">{{family}} family</p>
-      <p class="order">{{order}} order</p>
-      <p class="calories">{{calories}} cal</p>
+      <p class="family">family: {{family}}</p>
+      <p class="order">order: {{order}}</p>
+      <p class="calories">calories: {{calories}} cal</p>
     </div>  
   </div>
 </template>
@@ -14,16 +14,16 @@
         name: 'FruitCard',
         props: {
             name: {type:String, required: true},
-            family: {type:String, required: true},
-            order: {type:String, default:"Unknown"},
-            calories: {type:String, default: "???"}
+            family: {type:String, default:"Unspecified"},
+            order: {type:String, default:"Unspecified"},
+            calories: {type:Number, required: true}
         }
 	}
 </script>
 
 <style>
 	.fruit-card {
-        display: flex;
+        text-align: left;
 	}
 
 	h2 {
