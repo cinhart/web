@@ -1,4 +1,6 @@
-axios
-.get('https://www.fruityvice.com/api/fruit/all')
-.then(response => (his.info = response.data.bpi))
-.catch(error => console.log(error))
+export async function getAll()
+{
+	const request = await fetch("/api/fruit/all") 
+	const data = await request.json()
+	console.log(data)
+}

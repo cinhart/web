@@ -9,12 +9,29 @@
 
 <script>
 import FruitCard from './components/FruitCard.vue'
+import {getAll} from './services/api/request.js'
 
 export default {
   name: 'App',
   components: {
     FruitCard
-}
+  },
+  created: function() {
+    this.getFruitList()
+  },
+  data(){
+    return{
+      post: null,
+      searchbar:"",
+      fruitlist : []
+    }
+  },
+  methods: {
+    getFruitList : async function() {
+      this.fruitlist = await getAll()
+      console.log(this.fruitlist)
+    }
+  }
 }
 </script>
 
