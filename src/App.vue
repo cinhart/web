@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <FruitCard name="Apple"  family="Rosaceae" calories="52"/>
-    <FruitCard name="Cherry"  family="Rosaceae"/>
-    <FruitCard name="Banana"  family="Musaceae"/>
+    <div v-for="fruit in fruitlist" :key="fruit.id">
+      <FruitCard :name="fruit.name"  :family="fruit.family" :calories="fruit.nutritions.calories"/>
+    </div>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   name: 'App',
   components: {
     FruitCard
-  },
+},
   created: function() {
     this.getFruitList()
   },
@@ -29,7 +29,6 @@ export default {
   methods: {
     getFruitList : async function() {
       this.fruitlist = await getAll()
-      console.log(this.fruitlist)
     }
   }
 }
