@@ -31,25 +31,26 @@
 	.fruit-card {
         color: #F4F1DE;
         text-align: left;
-        padding-bottom: 10px;
-        padding-left: 10px;
+        padding:1vw;
+        padding-top: 0vw;
+        padding-bottom: 0.5vw;
 	}
 
 	h2 {
     margin:0;
     font-family: 'Source Sans 3';
-		font-size: 22px;
+		font-size: 2.4vw;
 	}
 
   h3 {
     margin:0;
-    margin-bottom:10px;
-    font-size: 12px;
+    margin-bottom:1vw;
+    font-size: 1.2vw;
   }
 
   p {
     margin:0;
-    font-size: 12px;
+    font-size: 1vw;
   }
 
 </style>

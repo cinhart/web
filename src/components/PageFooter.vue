@@ -17,5 +17,6 @@ footer {
     font-family: 'Sintony';
     background-color: #F2CC8F;
     color: #E07A5F;
+    font-size: 1.5vw;
 }
 </style>

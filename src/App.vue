@@ -96,7 +96,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@900&display=swap');
 
 body, html {
-  min-width: 100%;
   padding:0;
   margin:0;
   background: #F4F1DE;
@@ -110,6 +109,7 @@ body, html {
   text-align: center;
   color: #3d405b;
   margin-top: 20px;
+  font-size: 1.5vw;
 }
 
 #options {
@@ -121,12 +121,14 @@ body, html {
 }
 
 input, select, button {
+  font-size: 1.5vw;
   background: #F2CC8F;
   border: 0;
-  padding: 5px;
+  padding: 0.5vw;
   outline-color: #E07A5F;
   font-family: 'Sintony';
   color:#3d405b;
+  box-shadow: inset 1px 2px 4px rgba(61, 64, 91, 0.1);
 }
 
 ::placeholder {
@@ -148,10 +150,10 @@ input, select, button {
 .cards {
   background: #81B29A;
   box-shadow: 2px 4px 4px rgba(61, 64, 91, 0.1);
-  border-radius: 5px 50px;
+  border-radius: 0.5vw 5vw;
   width: 15%;
   float: left;
-  padding: 20px;
+  padding: 2vw;
   margin: 5px
 }
 

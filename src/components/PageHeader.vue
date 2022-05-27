@@ -12,10 +12,9 @@
 
 header {
     font-family: 'Source Sans 3';
-    font-size: 64px;
+    font-size: 6vw;
     line-height: 10%;
     text-align: center;
-    text-size-adjust: auto;
     color: #E07A5F;
     margin: 0;
 }
