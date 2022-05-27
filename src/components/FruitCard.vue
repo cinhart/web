@@ -39,13 +39,13 @@
 	h2 {
     margin:0;
     font-family: 'Source Sans 3';
-		font-size: 2.4vw;
+		font-size: 2vw;
 	}
 
   h3 {
     margin:0;
     margin-bottom:1vw;
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 
   p {

@@ -109,7 +109,7 @@ body, html {
   text-align: center;
   color: #3d405b;
   margin-top: 20px;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
 
 #options {
@@ -121,7 +121,7 @@ body, html {
 }
 
 input, select, button {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   background: #F2CC8F;
   border: 0;
   padding: 0.5vw;
