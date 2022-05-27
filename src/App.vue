@@ -20,7 +20,7 @@
     </div>
     <div id="fruits-gallery">
       <p v-if="isLoading">Loading...</p>
-      <div class="cards" v-for="fruit in fruitlist" :key="fruit.id">
+      <div class="cards" v-for="fruit in sortedFruitlist" :key="fruit.id">
         <FruitCard :name="fruit.name"  :family="fruit.family" :order="fruit.order" :calories="fruit.nutritions.calories"/>
       </div>
     </div>
@@ -41,11 +41,17 @@ export default {
     PageHeader,
     FruitCard,
     PageFooter
-},
+  },
+  computed: {
+    sortedFruitlist: function() {
+      return this.fruitlist
+        .filter((a) => a.name.toLowerCase().includes(this.search.toLowerCase()))
+    }
+  },
   created: function() {
     this.getFruitList()
   },
-  data(){
+  data() {
     return{
       fruitlist: [],
       fruitSortType: "AZName",
