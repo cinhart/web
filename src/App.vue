@@ -21,7 +21,8 @@
     <div id="fruits-gallery">
       <p v-if="isLoading">Loading...</p>
       <div class="cards" v-for="fruit in sortedFruitlist" :key="fruit.id">
-        <FruitCard :name="fruit.name"  :family="fruit.family" :order="fruit.order" :calories="fruit.nutritions.calories"/>
+        <FruitCard :name="fruit.name"  :family="fruit.family" :calories="fruit.nutritions.calories" 
+          :protein="fruit.nutritions.protein" :sugar="fruit.nutritions.sugar" :fat="fruit.nutritions.fat"/>
       </div>
     </div>
     <PageFooter/>
@@ -94,7 +95,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@900&display=swap');
 
-body {
+body, html {
+  min-width: 100%;
   padding:0;
   margin:0;
   background: #F4F1DE;
@@ -118,7 +120,7 @@ body {
   align-items: center;
 }
 
-input, select {
+input, select, button {
   background: #F2CC8F;
   border: 0;
   padding: 5px;
@@ -135,6 +137,8 @@ input, select {
 #fruits-gallery {
   margin-top: 20px;
   padding-bottom: 5px;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

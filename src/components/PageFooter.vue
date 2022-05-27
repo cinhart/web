@@ -1,6 +1,6 @@
 <template>
     <footer>
-        Website by Hartmann Cindy
+        Website by Hartmann Cindy - Made with Vue.js - 2022
     </footer>
 </template>
 
