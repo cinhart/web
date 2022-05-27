@@ -2,8 +2,8 @@
   <div class="fruit-card">
     <div>
       <h2 class="name">{{name}}</h2>
-      <p class="family">family: {{family}}</p>
-      <p class="order">order: {{order}}</p>
+      <h3 class="family">family: {{family}}</h3>
+      <h3 class="order">order: {{order}}</h3>
       <p class="calories">calories: {{calories}} cal</p>
     </div>  
   </div>
@@ -22,11 +22,25 @@
 </script>
 
 <style>
+
 	.fruit-card {
+        color: #F4F1DE;
         text-align: left;
 	}
 
 	h2 {
-		font-size: 20px;
+    margin:0;
+    font-family: 'Source Sans 3';
+		font-size: 22px;
 	}
+
+  h3 {
+    margin:0;
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
 </style>

@@ -91,20 +91,22 @@ export default {
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@900&display=swap');
+
 body {
-  min-height:100%;
   padding:0;
   margin:0;
-  position:relative;
+  background: #F4F1DE;
 }
 
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Sintony';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #373737;
+  color: #3d405b;
   margin-top: 20px;
 }
 
@@ -112,6 +114,22 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding-bottom: 2%;
+  align-items: center;
+}
+
+input, select {
+  background: #F2CC8F;
+  border: 0;
+  padding: 5px;
+  outline-color: #E07A5F;
+  font-family: 'Sintony';
+  color:#3d405b;
+}
+
+::placeholder {
+  font-family: 'Sintony';
+  color:#3d405b;
 }
 
 #fruits-gallery {
@@ -124,12 +142,12 @@ body {
 }
 
 .cards {
-  background: #9ba747;
-  color: #ffffff;
+  background: #81B29A;
+  box-shadow: 2px 4px 4px rgba(61, 64, 91, 0.1);
+  border-radius: 5px 50px;
   width: 15%;
   float: left;
   padding: 20px;
-  border-radius: 15px 50px;
   margin: 5px
 }
 

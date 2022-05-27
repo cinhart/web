@@ -9,7 +9,14 @@
 </script>
 
 <style>
+
 header {
-    color: #f29d4b;
+    font-family: 'Source Sans 3';
+    font-size: 64px;
+    line-height: 10%;
+    text-align: center;
+    text-size-adjust: auto;
+    color: #E07A5F;
+    margin: 0;
 }
 </style>
