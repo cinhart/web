@@ -46,31 +46,35 @@ export default {
     sortedFruitlist: function() {
       let data = this.fruitlist.filter((a) => a.name.toLowerCase().includes(this.search.toLowerCase())) // filter
       let field = ""
-
-      if(["AZName","ZAName","AZFamily","ZAFamily"].includes(this.fruitSortType)) {
+      if(["AZName","ZAName","AZFamily","ZAFamily"].includes(this.fruitSortType)) { //name&family
         ["AZName","ZAName"].includes(this.fruitSortType) ? field="name" : field="family"
         data = data.sort((a,b) => a[field].localeCompare(b[field]))
       }
-
-      else if(["AZCalories","ZACalories"].includes(this.fruitSortType)) {
-        data = data.sort(function(a,b){return a["nutritions"]["calories"]-b["nutritions"]["calories"]})
+      else if(["AZCalories","ZACalories"].includes(this.fruitSortType)) { //calories
+        data = data.sort((a,b) => a["nutritions"]["calories"]-b["nutritions"]["calories"])
       }
-
       const reversed = ["ZAName", "ZAFamily", "ZACalories"].includes(this.fruitSortType) ? true : false //reverse
       if(reversed) data = data.reverse()
-
       return data
     }
   },
   created: function() {
     this.getFruitList()
   },
+  watch: {
+    search: function(newSearch) {
+      localStorage.setItem("search", newSearch)
+    },
+    fruitSortType: function(newfruitSortType) {
+      localStorage.setItem("fruitSortType", newfruitSortType)
+    },
+  },
   data() {
     return{
       fruitlist: [],
-      fruitSortType: "AZName",
+      fruitSortType: localStorage.getItem("fruitSortType") || "AZName",
       isLoading: true,
-      search: ""
+      search: localStorage.getItem("search") || ""
     }
   },
   methods: {
