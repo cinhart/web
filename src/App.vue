@@ -108,7 +108,6 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #3d405b;
-  margin-top: 20px;
   font-size: 1.2vw;
 }
 
@@ -116,7 +115,6 @@ body, html {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 2%;
   align-items: center;
 }
 
@@ -137,8 +135,7 @@ input, select, button {
 }
 
 #fruits-gallery {
-  margin-top: 20px;
-  padding-bottom: 5px;
+  padding: 3%;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
