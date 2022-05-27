@@ -12,7 +12,7 @@
           <option value="AZName">name (A-Z)</option>
           <option value="ZAName">name (Z-A)</option>
           <option value="AZFamily">family (A-Z)</option>
-          <option value="ZAFamily">family (A-Z)</option>
+          <option value="ZAFamily">family (Z-A)</option>
           <option value="AZCalories">calories (lowest)</option>
           <option value="ZACalories">calories (highest)</option>
         </select>
@@ -44,8 +44,22 @@ export default {
   },
   computed: {
     sortedFruitlist: function() {
-      return this.fruitlist
-        .filter((a) => a.name.toLowerCase().includes(this.search.toLowerCase()))
+      let data = this.fruitlist.filter((a) => a.name.toLowerCase().includes(this.search.toLowerCase())) // filter
+      let field = ""
+
+      if(["AZName","ZAName","AZFamily","ZAFamily"].includes(this.fruitSortType)) {
+        ["AZName","ZAName"].includes(this.fruitSortType) ? field="name" : field="family"
+        data = data.sort((a,b) => a[field].localeCompare(b[field]))
+      }
+
+      else if(["AZCalories","ZACalories"].includes(this.fruitSortType)) {
+        data = data.sort(function(a,b){return a["nutritions"]["calories"]-b["nutritions"]["calories"]})
+      }
+
+      const reversed = ["ZAName", "ZAFamily", "ZACalories"].includes(this.fruitSortType) ? true : false //reverse
+      if(reversed) data = data.reverse()
+
+      return data
     }
   },
   created: function() {
