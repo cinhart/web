@@ -65,7 +65,7 @@ body {
 
 #fruits-gallery {
   margin-top: 20px;
-  padding-bottom: 7%;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

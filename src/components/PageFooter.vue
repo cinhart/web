@@ -10,7 +10,6 @@
 
 <style>
 footer {
-    position: absolute;
     width: 96%;
     padding: 2%;
     bottom: 0;
