@@ -5,6 +5,7 @@
         <input type="text" v-model="search" placeholder="look for a fruit..." />
     </div>
     <div id="fruits-gallery">
+      <p id="loading" v-if="isLoading">Loading...</p>
       <div class="cards" v-for="fruit in fruitlist" :key="fruit.id">
         <FruitCard :name="fruit.name"  :family="fruit.family" :order="fruit.order" :calories="fruit.nutritions.calories"/>
       </div>
@@ -33,12 +34,14 @@ export default {
   data(){
     return{
       search:"",
+      isLoading : true,
       fruitlist : []
     }
   },
   methods: {
     getFruitList : async function() {
-      this.fruitlist = await getAll()
+      this.fruitlist = await getAll(),
+      this.isLoading = false
     }
   }
 }
@@ -79,6 +82,10 @@ body {
   padding: 20px;
   border-radius: 15px 50px;
   margin: 5px
+}
+
+#loading {
+  color: #373737;
 }
 
 </style>
